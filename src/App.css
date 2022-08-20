@@ -5,14 +5,7 @@
   text-align: center;
   font-family: "Readex Pro", sans-serif;
 
-  background: radial-gradient(
-    circle,
-    rgb(164, 46, 97) 0%,
-    rgba(236, 171, 187, 1) 43%,
-    rgba(233, 166, 148, 1) 100%
-  );
-  background: rgb(27, 3, 105);
-  background-color: #282c34;
+  background-color: #f9faf5;
   display: flex;
 }
 
@@ -32,7 +25,7 @@
   display: flex;
   align-items: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgba(0, 0, 0, 0.8);
   width: 25vw;
 }
 
@@ -61,4 +54,14 @@
 
 .links li a {
   text-decoration: none;
+}
+
+.chooseItem {
+  width: 33vw;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-family: "Readex Pro", sans-serif;
 }

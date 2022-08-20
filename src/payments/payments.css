@@ -8,11 +8,16 @@
   height: 50px;
   margin-top: 10px;
 }
+.mada {
+  font-family: Readex Pro, sans-serif;
+  font-weight: 200;
+}
 .madaItems {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 30px;
+  font-weight: 200;
 }
 .change {
   display: flex;
@@ -23,19 +28,26 @@
   height: 20px;
   justify-content: center;
   align-items: center;
+  font-weight: 200;
 }
 
-.TP {
+.tp {
   border-radius: 5px;
-  color: whitesmoke;
+  color: 4e4d4d;
   padding: 10px;
+  font-family: Readex Pro, sans-serif;
+  font-weight: 200;
 }
 
 .cacheContainer {
+  font-family: Readex Pro, sans-serif;
+  font-weight: 200;
   margin-top: 80px;
+  font-size: 14px;
 }
 
 .cachChange {
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
 }

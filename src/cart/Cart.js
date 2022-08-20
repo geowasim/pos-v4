@@ -7,7 +7,14 @@ import MyImage from "../img/QandellaCompanyLogo1.png";
 import Payment from "../payments/Payment";
 
 const Basket = (props) => {
-  const { cartItems, resetCartItems, onAdd, onRemove, handleData } = props;
+  const {
+    cartItems,
+    resetCartItems,
+    onAdd,
+    onRemove,
+    handleData,
+    handleIsPrint,
+  } = props;
   const [method, setMethod] = useState("Mada");
   const [isCachDone, setIsCachDone] = useState(false);
   const [paidMoney, setPaidMoney] = useState(null);
@@ -49,10 +56,16 @@ const Basket = (props) => {
     <div className="basketContainer">
       <div className="basket">
         <h2 className="basketName">السلة</h2>
-        <div>{cartItems.length === 0 && <div>السلة فارغة </div>}</div>
+        <div>
+          {cartItems.length === 0 && (
+            <div>
+              <p>السلة فارغة</p>
+            </div>
+          )}
+        </div>
         {cartItems.map((item) => (
           <div key={item.id} className="row">
-            <div className="basketTitle">{item.title}</div>
+            <div className="basketTitle">{item.description}</div>
             <div className="basketIND">
               <button onClick={() => onAdd(item)} className="itemButton add">
                 +
@@ -143,6 +156,7 @@ const Basket = (props) => {
                     handlePrint();
                     resetCartItems();
                     handleData();
+                    handleIsPrint();
                   }}
                 >
                   الدفع - طباعة
@@ -153,7 +167,10 @@ const Basket = (props) => {
         )}
       </div>
       <div className="cartLogo">
-        <img src={MyImage} alt="myImage" />
+        <img
+          src="https://qudella-pos.netlify.app/static/media/QandellaCompanyLogo1.f666422c02bb6af5a36c.png"
+          alt="myImage"
+        />
         <div className="copyRights">
           <p>
             {" "}

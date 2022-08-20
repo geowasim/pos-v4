@@ -20,7 +20,7 @@ export default function Mada(props) {
         </h2>
       </div>
 
-      <h2 className="TP">
+      <h2 className="tp">
         المبلغ المطلوب : <span> {count * 0.15 + count} ريال </span>
       </h2>
     </div>

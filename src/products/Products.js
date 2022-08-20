@@ -5,7 +5,7 @@ import "./style.css";
 const Products = (props) => {
   const perfumes = useContext(PerfumeContext);
   const [idPerfume, setIdPerfume] = useState(null);
-
+  const { handleIsPrint } = props;
   useEffect(() => {
     props.findItem(idPerfume);
   }, [idPerfume, props]);
@@ -28,7 +28,7 @@ const Products = (props) => {
               } card`}
               onClick={() => {
                 setIdPerfume(perfume.id);
-                // handleIsPrint(true);
+                handleIsPrint(true);
               }}
             >
               <img src={perfume.image} alt={perfume.title} />
@@ -45,16 +45,3 @@ const Products = (props) => {
 };
 
 export default Products;
-
-/**
- * 
- * // Function to collect data
-const getApiData = async () => {
-  const response = await fetch(
-    "https://jsonplaceholder.typicode.com/todos/"
-  ).then((response) => response.json());
-
-  // update the state
-  setUsers(response);
-};
- */
