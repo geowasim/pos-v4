@@ -17,6 +17,7 @@ export default function Payment(props) {
     moneyFromClient,
     isChange,
     handleData,
+    handleIsPrint,
   } = props;
   useEffect(() => {
     if (showMethod === "Mada") {
@@ -43,6 +44,7 @@ export default function Payment(props) {
           moneyFromClient={moneyFromClient}
           isChange={isChange}
           handleData={handleData}
+          handleIsPrint={handleIsPrint}
         />
       ) : (
         <>

@@ -5,7 +5,7 @@ export default function Cash(props) {
   const count = props.itemsPrice;
   const { resetCartItems, moneyFromClient, handleData } = props;
   const countVat = (count * 15) / 100 + count;
-  const { isCach, handlePrint, isChange } = props;
+  const { isCach, handlePrint, isChange, handleIsPrint } = props;
   const [count2, setCount2] = useState(null);
 
   useEffect(() => {
@@ -49,6 +49,7 @@ export default function Cash(props) {
           isChange={isChange}
           handleData={handleData}
           resetCartItems={resetCartItems}
+          handleIsPrint={handleIsPrint}
         />
       </div>
     </div>

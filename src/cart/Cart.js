@@ -148,6 +148,7 @@ const Basket = (props) => {
                 moneyFromClient={moneyFromClient}
                 isChange={isChange}
                 handleData={handleData}
+                handleIsPrint={handleIsPrint}
               />
               {method === "Mada" ? (
                 <button

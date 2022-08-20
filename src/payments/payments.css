@@ -22,10 +22,10 @@
 .change {
   display: flex;
   position: absolute;
-  bottom: 102px;
-  right: 0vw;
+  bottom: 86px;
+  right: 1.5vw;
   background-color: #1899d6;
-  height: 20px;
+  height: 15px;
   justify-content: center;
   align-items: center;
   font-weight: 200;
@@ -42,12 +42,12 @@
 .cacheContainer {
   font-family: Readex Pro, sans-serif;
   font-weight: 200;
-  margin-top: 80px;
-  font-size: 14px;
+  margin-top: 24px;
+  font-size: 12px;
 }
 
 .cachChange {
-  margin-top: 10px;
+  margin-top: 5px;
   display: flex;
   justify-content: space-between;
 }
@@ -57,8 +57,8 @@
   bottom: 190;
   right: 35%;
   width: 150px;
-  margin-top: 15px;
-  font-size: 20px;
+  margin-top: 5px;
+  font-size: 18px;
   font-weight: bold;
   border: 1px dotted;
   padding: 5px 5px;
@@ -69,7 +69,6 @@
 .printFromCach {
   position: absolute;
   display: flex;
-  bottom: 150px;
   right: 25%;
   width: auto;
   padding: 0 50px;
@@ -77,4 +76,5 @@
   justify-content: center;
   align-items: center;
   font-size: 30px;
+  bottom: 120px;
 }
