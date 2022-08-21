@@ -169,8 +169,8 @@ const Basket = (props) => {
       </div>
       <div className="cartLogo">
         <img
-          src="https://qudella-pos.netlify.app/static/media/QandellaCompanyLogo1.f666422c02bb6af5a36c.png"
-          alt="myImage"
+          src="https://i.ibb.co/LnBP58T/Qandella-Company-Logo1.png"
+          alt="Qandella-Company-Logo1"
         />
         <div className="copyRights">
           <p>
