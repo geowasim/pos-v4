@@ -27,22 +27,57 @@
   margin-top: 15px;
 }
 
+.clientDataContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 15px;
+  width: 100%;
+}
+
+.L1 {
+  display: flex;
+  justify-content: flex-start;
+  text-align: start;
+  margin-top: 5px;
+}
+
+.L1 p,
+.L1 h4 {
+  flex: 1;
+  font-size: 0.9em;
+}
+
 p {
   font-size: 12px;
 }
 
-.preDataNP {
+.paymentDataContainer {
   display: flex;
-  font-size: 0.5rem;
-  justify-content: space-around;
-  flex: 1;
+  justify-content: center;
+  margin-top: 12px;
 }
 
-.preDataNP_1 p:nth-of-type(2) {
-  margin-right: 66px;
+.paymentData {
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  justify-content: center;
 }
-.preDataNP_2 p:nth-of-type(2) {
-  margin-right: 78px;
+
+.paymentData .L1 {
+  display: flex;
+  text-align: center;
+  margin-top: 0;
+}
+
+.paymentData .L1 h4,
+.paymentData .L1 p {
+  border: 1px dotted gray;
+  border-collapse: collapse;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .fatorah hr {

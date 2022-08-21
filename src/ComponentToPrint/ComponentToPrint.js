@@ -39,16 +39,16 @@ export const ComponentToPrint = React.forwardRef((props, ref) => {
 
         <p>C.R: 1010208753 :س .ت</p>
       </div>
-      <div className="g1">
-        <div className="preDataNP">
+      <div className="clientDataContainer">
+        <div className="L1">
           <p>Customer: Expo Customer</p>
           <p>Phone: </p>
         </div>
-        <div className="preDataNP preDataNP_1">
+        <div className="L1">
           <p>Flat: </p>
           <p>Building:</p>
         </div>
-        <div className="preDataNP preDataNP_2">
+        <div className="L1">
           <p>Street: </p>
           <p>Block: </p>
         </div>
@@ -61,8 +61,9 @@ export const ComponentToPrint = React.forwardRef((props, ref) => {
         <p>Salesperson: EXPO </p>
         <div className="date">
           <p>{new Date().toLocaleString()}</p>
-          <span>order# {data[data.length - 1].sn + 1}</span>
-          {/* String(Number(year) - 1000) */}
+          <span style={{ fontSize: "11px" }}>
+            order# {data[data.length - 1].sn + 1}
+          </span>
         </div>
       </div>
       <div className="p-5">
@@ -96,38 +97,53 @@ export const ComponentToPrint = React.forwardRef((props, ref) => {
               : ""}
           </tbody>
         </table>
-        <p style={{ marginTop: "15px" }}>
-          VAT 15% {Math.ceil(itemsPrice * 15) / 100} SAR
-        </p>
-        <br />
-        <h4 className="px-2">Total without VAT {Math.ceil(itemsPrice)} SAR</h4>
-        <br />
-        <h4 className="px-2">
-          Total Amount include VAT: {(itemsPrice * 15) / 100 + itemsPrice} SAR
-        </h4>
-        <br />
-        <p>
-          {method === "Mada"
-            ? "payment by : Mada(مدى)"
-            : "payment by : Cash(كاش)"}
-        </p>
-        {method === "Mada" ? (
-          <div className="paid">
-            <p>
-              <span>SAR {(itemsPrice * 15) / 100 + itemsPrice} </span> : المبلغ
-              المستلم
-            </p>
+        <div className="paymentDataContainer">
+          <div className="paymentData ">
+            <div className="L1">
+              <p>Total without VAT </p>
+              <p>{Math.ceil(itemsPrice)} SAR</p>
+            </div>
+            <div className="L1">
+              <p>VAT 15%</p>
+              <p>{Math.ceil(itemsPrice * 15) / 100} SAR </p>
+            </div>
+            <div className="L1" style={{ fontSize: "12px" }}>
+              <p
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <span style={{ fontWeight: "bold" }}>المبلغ شامل الضريبة</span>{" "}
+                <span>Total Amount include VAT:</span>{" "}
+              </p>
+              <h4 style={{ fontSize: "14px" }}>
+                {(itemsPrice * 15) / 100 + itemsPrice} SAR
+              </h4>
+            </div>
+            {method === "Mada" ? (
+              <div className="L1">
+                <p> Received: المبلغ المستلم</p>
+                <p> {(itemsPrice * 15) / 100 + itemsPrice} SAR</p>
+              </div>
+            ) : (
+              <>
+                <div className="L1">
+                  <p>المبلغ المستلم Received:</p>
+                  <p> {paidMoney} SAR</p>
+                </div>
+
+                <div className="L1">
+                  <p>المتبقي للعميل Change:</p>
+                  <p>SAR {change}</p>
+                </div>
+              </>
+            )}
           </div>
-        ) : (
-          <>
-            <p>
-              <span>SAR {paidMoney} </span> : المبلغ المستلم
-            </p>
-            <p>
-              <span>SAR {change} </span> : المتبقي للعميل
-            </p>
-          </>
-        )}
+        </div>
+        <br />
       </div>
       <br />
       <hr />
@@ -140,24 +156,3 @@ export const ComponentToPrint = React.forwardRef((props, ref) => {
     </div>
   );
 });
-
-// const [allData, setAllData] = useState(
-//   JSON.parse(localStorage.getItem("step_d")) || [
-//     {
-//       dateTime: `${
-//         new Date().toLocaleTimeString() +
-//         " - " +
-//         new Date().toLocaleDateString()
-//       }`,
-//       sn: 20,
-//       items: [],
-//       totalWithoutVat: 0,
-//       vat: 0,
-//       total: 0,
-//       qty: 0,
-//       paymentMehod: "",
-//       paid: 0,
-//       change: 0,
-//     },
-//   ]
-// );

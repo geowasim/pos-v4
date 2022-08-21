@@ -105,9 +105,7 @@ function App() {
   };
 
   const handleIsPrint = (v) => {
-    console.log(isPrint);
     setIsPrint(v);
-    console.log(isPrint);
   };
 
   return (
